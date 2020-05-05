@@ -22,6 +22,7 @@ namespace Bibliotheek
             frmregistreren registratie = new frmregistreren();
             registratie.Show();
             this.Hide();
+            //dit is goed
         }
 
         private void btninloggen_Click(object sender, EventArgs e)

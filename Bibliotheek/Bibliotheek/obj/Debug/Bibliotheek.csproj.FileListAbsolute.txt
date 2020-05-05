@@ -12,3 +12,17 @@ C:\Users\diang\source\repos\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmhom
 C:\Users\diang\source\repos\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmwijzigaccount.resources
 C:\Users\diang\source\repos\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmboetes.resources
 C:\Users\diang\source\repos\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmMijnBoeken.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\bin\Debug\Bibliotheek.exe.config
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\bin\Debug\Bibliotheek.exe
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\bin\Debug\Bibliotheek.pdb
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.csprojAssemblyReference.cache
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmboetes.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmhome.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frminloggen.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmMijnBoeken.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmregistreren.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmwijzigaccount.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.Properties.Resources.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.csproj.GenerateResource.cache
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.exe
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.pdb
