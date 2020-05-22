@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Bibliotheek</RootNamespace>
     <AssemblyName>Bibliotheek</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -113,8 +114,17 @@
     <Compile Include="frmwijzigaccount.Designer.cs">
       <DependentUpon>frmwijzigaccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmmeer_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmeer_info.Designer.cs">
+      <DependentUpon>frmmeer_info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmboeken.resx">
+      <DependentUpon>frmboeken.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmboetes.resx">
       <DependentUpon>frmboetes.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +143,9 @@
     <EmbeddedResource Include="frmwijzigaccount.resx">
       <DependentUpon>frmwijzigaccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmmeer_info.resx">
+      <DependentUpon>frmmeer_info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -141,6 +154,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

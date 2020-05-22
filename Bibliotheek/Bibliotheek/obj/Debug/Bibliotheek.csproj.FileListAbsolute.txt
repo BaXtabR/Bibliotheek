@@ -26,3 +26,20 @@ C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Biblio
 C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.csproj.GenerateResource.cache
 C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.exe
 C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.pdb
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\bin\Debug\Bibliotheek.exe.config
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\bin\Debug\Bibliotheek.exe
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\bin\Debug\Bibliotheek.pdb
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.csprojAssemblyReference.cache
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmboetes.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmhome.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frminloggen.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmMijnBoeken.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmregistreren.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmwijzigaccount.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.Properties.Resources.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.csproj.GenerateResource.cache
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.csproj.CoreCompileInputs.cache
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.exe
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.pdb
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmboeken.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmmeer_info.resources

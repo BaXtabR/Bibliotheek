@@ -24,7 +24,13 @@ namespace Bibliotheek
 
         private void frmhome_Load(object sender, EventArgs e)
         {
-
+            lblgebebruiker.Text = frminloggen.gebruiker;
+            if (!frminloggen.admin)
+            {
+                btnoverzichboetes.Hide();
+                btnoverzichtaccounts.Hide();
+                btnoverzichtboeken.Hide();
+            }
         }
 
         private void frmhome_FormClosed(object sender, FormClosedEventArgs e)
