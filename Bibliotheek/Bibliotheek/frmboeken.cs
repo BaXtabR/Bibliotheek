@@ -15,6 +15,7 @@ namespace Bibliotheek
     public partial class frmboeken : Form
     {
         private static int min;
+        private static int[] boekIDs = new int[3];
         public static string[] auteurs = new string[3];
         public static string[] Beschrijvingen = new string[3];
         public static string[] Titels = new string[3];
@@ -63,7 +64,7 @@ namespace Bibliotheek
                     ISBNs[i - 1] = Convert.ToString(dataLezer.GetValue(1));
                     boekstatusen[i - 1] = dataLezer.GetBoolean(6);
                     status_van_boek(i - 1, dataLezer.GetBoolean(6));
-
+                    boekIDs[i - 1] = Convert.ToInt32(dataLezer.GetValue(0));
                 }
                 minimum++;
             }
@@ -198,6 +199,71 @@ namespace Bibliotheek
             frmhome home = new frmhome();
             home.Show();
             this.Hide();
+        }
+
+        private void btnontlenen1_Click(object sender, EventArgs e)
+        {
+            if (boekstatusen[0])
+            {
+                ontlenen(boekIDs[0]);
+            }
+            else
+            {
+                MessageBox.Show("Sorry dit boek is niet ter beschikking");
+            }
+        }
+        private void ontlenen(int boek)
+        {
+            string opdrString;
+            String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
+
+            OleDbConnection verbinding = new OleDbConnection(verbindingsstring);
+
+            verbinding.Open();
+            try
+            {
+                opdrString = "update tblBoeken set Status = ? where Boekid = ?";
+
+
+                OleDbCommand opdracht = new OleDbCommand(opdrString, verbinding);
+                opdracht.Parameters.AddWithValue("", false);
+                opdracht.Parameters.AddWithValue("", boek);
+
+                opdracht.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Problemen bij Weizigen van de voornaam." + ex);
+            }
+            finally
+            {
+                status_van_boek(boek, false);
+                verbinding.Close();
+            }
+        }
+
+        private void btnontlenen2_Click(object sender, EventArgs e)
+        {
+            if (boekstatusen[1])
+            {
+                ontlenen(boekIDs[1]);
+            }
+            else
+            {
+                MessageBox.Show("Sorry dit boek is niet ter beschikking");
+            }
+        }
+
+        private void btnontlenen3_Click(object sender, EventArgs e)
+        {
+            if (boekstatusen[2])
+            {
+                ontlenen(boekIDs[2]);
+            }
+            else
+            {
+                MessageBox.Show("Sorry dit boek is niet ter beschikking");
+            }
         }
     }
 }

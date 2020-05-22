@@ -49,6 +49,9 @@
             this.lbltiteltext3 = new System.Windows.Forms.Label();
             this.btnmeerinfo1 = new System.Windows.Forms.Button();
             this.btnterug = new System.Windows.Forms.Button();
+            this.btnontlenen1 = new System.Windows.Forms.Button();
+            this.btnontlenen2 = new System.Windows.Forms.Button();
+            this.btnontlenen3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbboek1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbboek2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbboek3)).BeginInit();
@@ -258,11 +261,47 @@
             this.btnterug.UseVisualStyleBackColor = true;
             this.btnterug.Click += new System.EventHandler(this.btnterug_Click);
             // 
+            // btnontlenen1
+            // 
+            this.btnontlenen1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnontlenen1.Location = new System.Drawing.Point(12, 363);
+            this.btnontlenen1.Name = "btnontlenen1";
+            this.btnontlenen1.Size = new System.Drawing.Size(235, 54);
+            this.btnontlenen1.TabIndex = 23;
+            this.btnontlenen1.Text = "Ontlenen";
+            this.btnontlenen1.UseVisualStyleBackColor = true;
+            this.btnontlenen1.Click += new System.EventHandler(this.btnontlenen1_Click);
+            // 
+            // btnontlenen2
+            // 
+            this.btnontlenen2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnontlenen2.Location = new System.Drawing.Point(392, 363);
+            this.btnontlenen2.Name = "btnontlenen2";
+            this.btnontlenen2.Size = new System.Drawing.Size(235, 54);
+            this.btnontlenen2.TabIndex = 24;
+            this.btnontlenen2.Text = "Ontlenen";
+            this.btnontlenen2.UseVisualStyleBackColor = true;
+            this.btnontlenen2.Click += new System.EventHandler(this.btnontlenen2_Click);
+            // 
+            // btnontlenen3
+            // 
+            this.btnontlenen3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnontlenen3.Location = new System.Drawing.Point(768, 363);
+            this.btnontlenen3.Name = "btnontlenen3";
+            this.btnontlenen3.Size = new System.Drawing.Size(235, 54);
+            this.btnontlenen3.TabIndex = 25;
+            this.btnontlenen3.Text = "Ontlenen";
+            this.btnontlenen3.UseVisualStyleBackColor = true;
+            this.btnontlenen3.Click += new System.EventHandler(this.btnontlenen3_Click);
+            // 
             // frmboeken
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 562);
+            this.Controls.Add(this.btnontlenen3);
+            this.Controls.Add(this.btnontlenen2);
+            this.Controls.Add(this.btnontlenen1);
             this.Controls.Add(this.btnterug);
             this.Controls.Add(this.btnmeerinfo1);
             this.Controls.Add(this.lbltiteltext3);
@@ -322,5 +361,8 @@
         private System.Windows.Forms.Label lbltiteltext3;
         private System.Windows.Forms.Button btnmeerinfo1;
         private System.Windows.Forms.Button btnterug;
+        private System.Windows.Forms.Button btnontlenen1;
+        private System.Windows.Forms.Button btnontlenen2;
+        private System.Windows.Forms.Button btnontlenen3;
     }
 }

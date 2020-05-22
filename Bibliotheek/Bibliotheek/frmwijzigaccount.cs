@@ -181,7 +181,8 @@ namespace Bibliotheek
                 //sluiten databank en verversen data
                 verbinding.Close();
                 laad_data();
-            }
+            }
+
         }
         private void laad_data()
         {
