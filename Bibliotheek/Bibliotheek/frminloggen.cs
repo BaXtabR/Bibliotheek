@@ -14,7 +14,8 @@ namespace Bibliotheek
     public partial class frminloggen : Form
     {
         public static string gebruiker;
-        public static bool admin;
+        public static bool admin; 
+        public static int id;
         public frminloggen()
         {
             InitializeComponent();
@@ -59,6 +60,7 @@ namespace Bibliotheek
                 aantal++;
                 gebruiker = Convert.ToString(dataLezer.GetValue(4));
                 admin = Convert.ToBoolean(dataLezer.GetBoolean(6));
+                id = Convert.ToInt32(dataLezer.GetValue(0));
             }
 
 

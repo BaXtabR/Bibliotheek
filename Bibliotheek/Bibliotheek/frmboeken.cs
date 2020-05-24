@@ -70,7 +70,7 @@ namespace Bibliotheek
             }
             lbltiteltext1.Text = Titels[0];
             lbltiteltext2.Text = Titels[1];
-            lbltiteltext3.Text = Titels[2];
+            lbltiteltext3.Text = Convert.ToString(boekstatusen[2]);
            
 
         }
@@ -205,40 +205,70 @@ namespace Bibliotheek
         {
             if (boekstatusen[0])
             {
-                ontlenen(boekIDs[0]);
+                ontlenen(boekIDs[0],frminloggen.id,0);
             }
             else
             {
                 MessageBox.Show("Sorry dit boek is niet ter beschikking");
             }
         }
-        private void ontlenen(int boek)
+        private void ontlenen(int boek,int user, int pos)
         {
-            string opdrString;
             String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
 
             OleDbConnection verbinding = new OleDbConnection(verbindingsstring);
 
-            verbinding.Open();
             try
             {
-                opdrString = "update tblBoeken set Status = ? where Boekid = ?";
+                verbinding.Open();
 
+                OleDbCommand opdracht = new OleDbCommand("INSERT INTO tblLenen (BoekId, GebruikerId,DatumVanLenen) VALUES (?,?,?)", verbinding);
+                String date = DateTime.Now.ToString("dd/MM/yyyy");
 
-                OleDbCommand opdracht = new OleDbCommand(opdrString, verbinding);
-                opdracht.Parameters.AddWithValue("", false);
                 opdracht.Parameters.AddWithValue("", boek);
+
+                opdracht.Parameters.AddWithValue("", user);
+
+                opdracht.Parameters.AddWithValue("", date);
 
                 opdracht.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Problemen bij Weizigen van de voornaam." + ex);
+                MessageBox.Show("Fout bij het invoegen van gegevens in de databank " + ex);
             }
             finally
             {
-                status_van_boek(boek, false);
                 verbinding.Close();
+                wijzig_status(boek,pos);
+            }
+        }
+        private void wijzig_status(int boek, int pos)
+        {
+            String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
+
+            OleDbConnection verbinding = new OleDbConnection(verbindingsstring);
+
+            try
+            {
+                verbinding.Open();
+                String opdrString = "update tblBoeken set Status =? where Boekid = ?";
+                OleDbCommand opdracht = new OleDbCommand(opdrString, verbinding);
+                opdracht.Parameters.AddWithValue("", false);
+                opdracht.Parameters.AddWithValue("", boek);
+
+                opdracht.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("boek status fout " + ex);
+            }
+            finally
+            {
+                verbinding.Close();
+                boekstatusen[pos] = false;
+                status_van_boek(pos, false);
             }
         }
 
@@ -246,7 +276,7 @@ namespace Bibliotheek
         {
             if (boekstatusen[1])
             {
-                ontlenen(boekIDs[1]);
+                ontlenen(boekIDs[1], frminloggen.id,1);
             }
             else
             {
@@ -258,7 +288,7 @@ namespace Bibliotheek
         {
             if (boekstatusen[2])
             {
-                ontlenen(boekIDs[2]);
+                ontlenen(boekIDs[2], frminloggen.id,2);
             }
             else
             {

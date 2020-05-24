@@ -37,6 +37,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -137,8 +138,20 @@
     <EmbeddedResource Include="frmMijnBoeken.resx">
       <DependentUpon>frmMijnBoeken.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmoverzichtboeken.resx">
+      <DependentUpon>frmoverzichtboeken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoverzichtboetes.resx">
+      <DependentUpon>frmoverzichtboetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoverzichtgebruikers.resx">
+      <DependentUpon>frmoverzichtgebruikers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmregistreren.resx">
       <DependentUpon>frmregistreren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsettings.resx">
+      <DependentUpon>frmsettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmwijzigaccount.resx">
       <DependentUpon>frmwijzigaccount.cs</DependentUpon>

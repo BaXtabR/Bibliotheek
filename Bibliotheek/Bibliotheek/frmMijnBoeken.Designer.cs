@@ -28,31 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lsbLijsboeken = new System.Windows.Forms.ListBox();
+            this.lsbboekbezit = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // lsbLijsboeken
+            // lsbboekbezit
             // 
-            this.lsbLijsboeken.FormattingEnabled = true;
-            this.lsbLijsboeken.Location = new System.Drawing.Point(12, 12);
-            this.lsbLijsboeken.Name = "lsbLijsboeken";
-            this.lsbLijsboeken.Size = new System.Drawing.Size(776, 160);
-            this.lsbLijsboeken.TabIndex = 0;
+            this.lsbboekbezit.FormattingEnabled = true;
+            this.lsbboekbezit.ItemHeight = 16;
+            this.lsbboekbezit.Location = new System.Drawing.Point(0, 0);
+            this.lsbboekbezit.Name = "lsbboekbezit";
+            this.lsbboekbezit.Size = new System.Drawing.Size(318, 452);
+            this.lsbboekbezit.TabIndex = 0;
             // 
             // frmMijnBoeken
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 267);
-            this.Controls.Add(this.lsbLijsboeken);
+            this.ClientSize = new System.Drawing.Size(316, 557);
+            this.Controls.Add(this.lsbboekbezit);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMijnBoeken";
             this.Text = "frmMijnBoeken";
+            this.Load += new System.EventHandler(this.frmMijnBoeken_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox lsbLijsboeken;
+        private System.Windows.Forms.ListBox lsbboekbezit;
     }
 }

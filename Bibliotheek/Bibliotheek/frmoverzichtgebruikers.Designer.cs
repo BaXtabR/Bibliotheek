@@ -28,12 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgvOverzichtGebruikers = new System.Windows.Forms.DataGridView();
+            this.btnTerug = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOverzichtGebruikers)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvOverzichtGebruikers
+            // 
+            this.dgvOverzichtGebruikers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOverzichtGebruikers.Location = new System.Drawing.Point(0, 0);
+            this.dgvOverzichtGebruikers.Name = "dgvOverzichtGebruikers";
+            this.dgvOverzichtGebruikers.RowTemplate.Height = 24;
+            this.dgvOverzichtGebruikers.Size = new System.Drawing.Size(801, 452);
+            this.dgvOverzichtGebruikers.TabIndex = 0;
+            // 
+            // btnTerug
+            // 
+            this.btnTerug.Location = new System.Drawing.Point(339, 458);
+            this.btnTerug.Name = "btnTerug";
+            this.btnTerug.Size = new System.Drawing.Size(137, 63);
+            this.btnTerug.TabIndex = 2;
+            this.btnTerug.Text = "Terug";
+            this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
+            // 
+            // frmoverzichtgebruikers
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 530);
+            this.Controls.Add(this.btnTerug);
+            this.Controls.Add(this.dgvOverzichtGebruikers);
+            this.Name = "frmoverzichtgebruikers";
             this.Text = "frmoverzichtgebruikers";
+            this.Load += new System.EventHandler(this.frmoverzichtgebruikers_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOverzichtGebruikers)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvOverzichtGebruikers;
+        private System.Windows.Forms.Button btnTerug;
     }
 }
