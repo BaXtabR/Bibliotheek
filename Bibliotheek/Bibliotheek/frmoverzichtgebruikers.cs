@@ -29,7 +29,7 @@ namespace Bibliotheek
             {
                 verbinding.Open();
 
-                String sql = "SELECT * from tblBoeken";
+                String sql = "SELECT * from tblGebruiker";
 
                 OleDbDataAdapter oledbAdapter = new OleDbDataAdapter(sql, verbinding);
 

@@ -13,7 +13,8 @@ namespace Bibliotheek
 {
     public partial class frmMijnBoeken : Form
     {
-        private int[] BoekIds = new int[99999];
+        int lengte;
+        private int[] BoekIds = new int[50];
         public frmMijnBoeken()
         {
             InitializeComponent();
@@ -21,7 +22,6 @@ namespace Bibliotheek
 
         private void frmMijnBoeken_Load(object sender, EventArgs e)
         {
-            int[] BoekIDs = new int[999999];
 
             String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
 
@@ -41,37 +41,128 @@ namespace Bibliotheek
 
             while (dataLezer.Read())
             {
-                BoekIDs[i] = Convert.ToInt32(dataLezer.GetValue(0));
+                BoekIds[i] = Convert.ToInt32(dataLezer.GetValue(0));
                 i++;
             }
             verbinding.Close();
-            Mijn_Boeken_Load();
-        }
-        private void Mijn_Boeken_Load()
-        {
-            int lengte = BoekIds.Length;
-            for(int i = 0; i <= lengte; i++)
+            lengte = BoekIds.Length;
+            for(int y=0;y<lengte;y++)
             {
-                String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
+              Mijn_Boeken_Load(BoekIds[y]);
+            }
+           
+            
+        }
+        private void Mijn_Boeken_Load(int id)
+        {
+             String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
 
-                OleDbConnection verbinding = new OleDbConnection(verbindingsstring);
+              OleDbConnection verbinding = new OleDbConnection(verbindingsstring);
 
+              verbinding.Open();
+
+            String code = "SELECT Titel from tblBoeken b,tblLenen l where b.Boekid=? and l.InBezit=? and l.BoekId=b.Boekid";
+            OleDbCommand opdracht = new OleDbCommand(code, verbinding);
+            opdracht.Parameters.AddWithValue("", id);
+            opdracht.Parameters.AddWithValue("", true);
+            OleDbDataReader dataLezer = opdracht.ExecuteReader(CommandBehavior.CloseConnection);
+
+            while (dataLezer.Read())
+            {
+               lsbboekbezit.Items.Add(dataLezer.GetValue(0));
+            }
+            verbinding.Close();
+
+        }
+
+        private void btnTerug_Click(object sender, EventArgs e)
+        {
+            frmhome home = new frmhome();
+            home.Show();
+            this.Hide();
+        }
+
+        private void btnTerugbrengen_Click(object sender, EventArgs e)
+        {
+            String titel = Convert.ToString(lsbboekbezit.SelectedItem);
+
+            String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
+
+            OleDbConnection verbinding = new OleDbConnection(verbindingsstring);
+
+            try
+            {
                 verbinding.Open();
+                String opdrString = "update tblBoeken set Status =? where Titel = ?";
+                OleDbCommand opdracht = new OleDbCommand(opdrString, verbinding);
+                opdracht.Parameters.AddWithValue("", true);
+                opdracht.Parameters.AddWithValue("", titel);
 
-                String code = "SELECT Titel from tblLenen where Boekid like ?";
+                opdracht.ExecuteNonQuery();
 
-                OleDbCommand opdracht = new OleDbCommand(code, verbinding);
-                opdracht.Parameters.AddWithValue("", BoekIds[i]);
-                OleDbDataReader dataLezer = opdracht.ExecuteReader(CommandBehavior.CloseConnection);
-                while (dataLezer.Read())
-                {
-                    lsbboekbezit.Items.Add(dataLezer.GetValue(0));
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("boek status fout " + ex);
+            }
+            finally
+            {
+                verbinding.Close();
+                int id= zoek_boekid(titel);
+                bezitstatus(id);
+            }
+
+
+        }
+        private void bezitstatus(int id)
+        {
+            String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
+
+            OleDbConnection verbinding = new OleDbConnection(verbindingsstring);
+
+            try
+            {
+                verbinding.Open();
+                String opdrString = "update tblLenen set InBezit =? where BoekId = ?";
+                OleDbCommand opdracht = new OleDbCommand(opdrString, verbinding);
+                opdracht.Parameters.AddWithValue("", false);
+                opdracht.Parameters.AddWithValue("", id);
+
+                opdracht.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("boek status fout " + ex);
+            }
+            finally
+            {
                 verbinding.Close();
             }
-            
+        }
 
+        private int zoek_boekid(String titel)
+        {
+            int BoekId=0;
 
+            String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
+
+            OleDbConnection verbinding = new OleDbConnection(verbindingsstring);
+
+            verbinding.Open();
+
+            String code = "SELECT Boekid from tblBoeken where Titel Like ?";
+            OleDbCommand opdracht = new OleDbCommand(code, verbinding);
+            opdracht.Parameters.AddWithValue("", titel);
+            OleDbDataReader dataLezer = opdracht.ExecuteReader(CommandBehavior.CloseConnection);
+
+            while (dataLezer.Read())
+            {
+                BoekId=Convert.ToInt32(dataLezer.GetValue(0));
+                
+            }
+            verbinding.Close();
+            return BoekId;  
         }
     }
 }

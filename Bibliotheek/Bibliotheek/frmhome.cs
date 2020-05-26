@@ -68,9 +68,7 @@ namespace Bibliotheek
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            frmsettings settings = new frmsettings();
-            settings.Show();
-            this.Hide();
+
         }
 
         private void btnoverzichtboeken_Click(object sender, EventArgs e)

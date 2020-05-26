@@ -103,12 +103,6 @@
     <Compile Include="frmregistreren.Designer.cs">
       <DependentUpon>frmregistreren.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmsettings.Designer.cs">
-      <DependentUpon>frmsettings.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmwijzigaccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmregistreren.resx">
       <DependentUpon>frmregistreren.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmsettings.resx">
-      <DependentUpon>frmsettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmwijzigaccount.resx">
       <DependentUpon>frmwijzigaccount.cs</DependentUpon>

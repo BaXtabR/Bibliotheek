@@ -65,6 +65,7 @@
             // 
             this.txtpaswoord.Location = new System.Drawing.Point(116, 54);
             this.txtpaswoord.Name = "txtpaswoord";
+            this.txtpaswoord.PasswordChar = '*';
             this.txtpaswoord.Size = new System.Drawing.Size(100, 20);
             this.txtpaswoord.TabIndex = 3;
             // 

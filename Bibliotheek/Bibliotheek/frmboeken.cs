@@ -70,7 +70,7 @@ namespace Bibliotheek
             }
             lbltiteltext1.Text = Titels[0];
             lbltiteltext2.Text = Titels[1];
-            lbltiteltext3.Text = Convert.ToString(boekstatusen[2]);
+            lbltiteltext3.Text = Titels[2]; 
            
 
         }

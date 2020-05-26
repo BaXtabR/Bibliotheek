@@ -32,7 +32,6 @@
             this.btnMijnboeken = new System.Windows.Forms.Button();
             this.btnboetes = new System.Windows.Forms.Button();
             this.btnaccount = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.btnoverzichboetes = new System.Windows.Forms.Button();
             this.btnoverzichtaccounts = new System.Windows.Forms.Button();
             this.btnoverzichtboeken = new System.Windows.Forms.Button();
@@ -41,10 +40,9 @@
             // 
             // btnbib
             // 
-            this.btnbib.Location = new System.Drawing.Point(53, 116);
-            this.btnbib.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnbib.Location = new System.Drawing.Point(40, 94);
             this.btnbib.Name = "btnbib";
-            this.btnbib.Size = new System.Drawing.Size(172, 76);
+            this.btnbib.Size = new System.Drawing.Size(129, 62);
             this.btnbib.TabIndex = 1;
             this.btnbib.Text = "Boeken";
             this.btnbib.UseVisualStyleBackColor = true;
@@ -52,10 +50,9 @@
             // 
             // btnMijnboeken
             // 
-            this.btnMijnboeken.Location = new System.Drawing.Point(53, 199);
-            this.btnMijnboeken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMijnboeken.Location = new System.Drawing.Point(40, 162);
             this.btnMijnboeken.Name = "btnMijnboeken";
-            this.btnMijnboeken.Size = new System.Drawing.Size(172, 76);
+            this.btnMijnboeken.Size = new System.Drawing.Size(129, 62);
             this.btnMijnboeken.TabIndex = 2;
             this.btnMijnboeken.Text = "Mijn Boeken";
             this.btnMijnboeken.UseVisualStyleBackColor = true;
@@ -63,10 +60,9 @@
             // 
             // btnboetes
             // 
-            this.btnboetes.Location = new System.Drawing.Point(53, 283);
-            this.btnboetes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnboetes.Location = new System.Drawing.Point(40, 230);
             this.btnboetes.Name = "btnboetes";
-            this.btnboetes.Size = new System.Drawing.Size(172, 76);
+            this.btnboetes.Size = new System.Drawing.Size(129, 62);
             this.btnboetes.TabIndex = 3;
             this.btnboetes.Text = "Boetes";
             this.btnboetes.UseVisualStyleBackColor = true;
@@ -74,32 +70,19 @@
             // 
             // btnaccount
             // 
-            this.btnaccount.Location = new System.Drawing.Point(857, 15);
-            this.btnaccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnaccount.Location = new System.Drawing.Point(643, 12);
             this.btnaccount.Name = "btnaccount";
-            this.btnaccount.Size = new System.Drawing.Size(172, 76);
+            this.btnaccount.Size = new System.Drawing.Size(129, 62);
             this.btnaccount.TabIndex = 4;
             this.btnaccount.Text = "Mijn account";
             this.btnaccount.UseVisualStyleBackColor = true;
             this.btnaccount.Click += new System.EventHandler(this.btnaccount_Click);
             // 
-            // btnSettings
-            // 
-            this.btnSettings.Location = new System.Drawing.Point(857, 436);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(172, 76);
-            this.btnSettings.TabIndex = 5;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
             // btnoverzichboetes
             // 
-            this.btnoverzichboetes.Location = new System.Drawing.Point(857, 294);
-            this.btnoverzichboetes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnoverzichboetes.Location = new System.Drawing.Point(643, 239);
             this.btnoverzichboetes.Name = "btnoverzichboetes";
-            this.btnoverzichboetes.Size = new System.Drawing.Size(172, 76);
+            this.btnoverzichboetes.Size = new System.Drawing.Size(129, 62);
             this.btnoverzichboetes.TabIndex = 8;
             this.btnoverzichboetes.Text = "Overzicht Boetes";
             this.btnoverzichboetes.UseVisualStyleBackColor = true;
@@ -107,10 +90,9 @@
             // 
             // btnoverzichtaccounts
             // 
-            this.btnoverzichtaccounts.Location = new System.Drawing.Point(857, 210);
-            this.btnoverzichtaccounts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnoverzichtaccounts.Location = new System.Drawing.Point(643, 171);
             this.btnoverzichtaccounts.Name = "btnoverzichtaccounts";
-            this.btnoverzichtaccounts.Size = new System.Drawing.Size(172, 76);
+            this.btnoverzichtaccounts.Size = new System.Drawing.Size(129, 62);
             this.btnoverzichtaccounts.TabIndex = 7;
             this.btnoverzichtaccounts.Text = "Overzicht Accounts";
             this.btnoverzichtaccounts.UseVisualStyleBackColor = true;
@@ -118,10 +100,9 @@
             // 
             // btnoverzichtboeken
             // 
-            this.btnoverzichtboeken.Location = new System.Drawing.Point(857, 127);
-            this.btnoverzichtboeken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnoverzichtboeken.Location = new System.Drawing.Point(643, 103);
             this.btnoverzichtboeken.Name = "btnoverzichtboeken";
-            this.btnoverzichtboeken.Size = new System.Drawing.Size(172, 76);
+            this.btnoverzichtboeken.Size = new System.Drawing.Size(129, 62);
             this.btnoverzichtboeken.TabIndex = 6;
             this.btnoverzichtboeken.Text = "Overzicht Boeken";
             this.btnoverzichtboeken.UseVisualStyleBackColor = true;
@@ -131,27 +112,26 @@
             // 
             this.lblgebebruiker.AutoSize = true;
             this.lblgebebruiker.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblgebebruiker.Location = new System.Drawing.Point(334, 45);
+            this.lblgebebruiker.Location = new System.Drawing.Point(250, 37);
+            this.lblgebebruiker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblgebebruiker.Name = "lblgebebruiker";
-            this.lblgebebruiker.Size = new System.Drawing.Size(85, 29);
+            this.lblgebebruiker.Size = new System.Drawing.Size(66, 24);
             this.lblgebebruiker.TabIndex = 9;
             this.lblgebebruiker.Text = "label1";
             // 
             // frmhome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 527);
+            this.ClientSize = new System.Drawing.Size(784, 428);
             this.Controls.Add(this.lblgebebruiker);
             this.Controls.Add(this.btnoverzichboetes);
             this.Controls.Add(this.btnoverzichtaccounts);
             this.Controls.Add(this.btnoverzichtboeken);
-            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnaccount);
             this.Controls.Add(this.btnboetes);
             this.Controls.Add(this.btnMijnboeken);
             this.Controls.Add(this.btnbib);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmhome";
             this.Text = "Home";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmhome_FormClosed);
@@ -167,7 +147,6 @@
         private System.Windows.Forms.Button btnMijnboeken;
         private System.Windows.Forms.Button btnboetes;
         private System.Windows.Forms.Button btnaccount;
-        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnoverzichboetes;
         private System.Windows.Forms.Button btnoverzichtaccounts;
         private System.Windows.Forms.Button btnoverzichtboeken;

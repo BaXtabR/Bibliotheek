@@ -47,3 +47,8 @@ C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\
 C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmoverzichtboetes.resources
 C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmoverzichtgebruikers.resources
 C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmsettings.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmboeken.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmoverzichtboeken.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmoverzichtboetes.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmoverzichtgebruikers.resources
+C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmmeer_info.resources
