@@ -30,7 +30,7 @@ namespace Bibliotheek
         private void frmResultaat_zoeken_Boeken_Load(object sender, EventArgs e)
         {
                     zoeken_laden(y);
-                    leeg(boekIDs[1], boekIDs[2]);
+                    leeg(frmZoeken.gezochteIDs[1], frmZoeken.gezochteIDs[2]);
         }
         private void leeg(int boek2, int boek3)
         {
