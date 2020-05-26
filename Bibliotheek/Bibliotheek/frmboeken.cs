@@ -18,6 +18,7 @@ namespace Bibliotheek
         private static int[] boekIDs = new int[3];
         public static string[] auteurs = new string[3];
         public static string[] Beschrijvingen = new string[3];
+        public static string[] Afbeelding = new string[3];
         public static string[] Titels = new string[3];
         public static string[] ISBNs = new string[3];
         public static bool[] boekstatusen = new bool[3];
@@ -60,6 +61,7 @@ namespace Bibliotheek
                 {
                     auteurs[i - 1] = Convert.ToString(dataLezer.GetValue(3));
                     Beschrijvingen[i - 1] = Convert.ToString(dataLezer.GetValue(4));
+                    Afbeelding[i - 1] = Convert.ToString(dataLezer.GetValue(5));
                     Titels[i - 1] = Convert.ToString(dataLezer.GetValue(2));
                     ISBNs[i - 1] = Convert.ToString(dataLezer.GetValue(1));
                     boekstatusen[i - 1] = dataLezer.GetBoolean(6);
@@ -70,8 +72,11 @@ namespace Bibliotheek
             }
             lbltiteltext1.Text = Titels[0];
             lbltiteltext2.Text = Titels[1];
-            lbltiteltext3.Text = Titels[2]; 
-           
+            lbltiteltext3.Text = Titels[2];
+            pcbboek1.ImageLocation = Afbeelding[0];
+            pcbboek2.ImageLocation = Afbeelding[1];
+            pcbboek3.ImageLocation = Afbeelding[2];
+
 
         }
 
@@ -294,6 +299,10 @@ namespace Bibliotheek
             {
                 MessageBox.Show("Sorry dit boek is niet ter beschikking");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

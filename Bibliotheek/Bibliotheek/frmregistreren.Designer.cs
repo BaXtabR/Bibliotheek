@@ -111,6 +111,7 @@
             // 
             this.txtpaswoord.Location = new System.Drawing.Point(151, 130);
             this.txtpaswoord.Name = "txtpaswoord";
+            this.txtpaswoord.PasswordChar = '*';
             this.txtpaswoord.Size = new System.Drawing.Size(100, 20);
             this.txtpaswoord.TabIndex = 9;
             // 
@@ -127,6 +128,7 @@
             // 
             this.txtbevestigpaswoord.Location = new System.Drawing.Point(151, 156);
             this.txtbevestigpaswoord.Name = "txtbevestigpaswoord";
+            this.txtbevestigpaswoord.PasswordChar = '*';
             this.txtbevestigpaswoord.Size = new System.Drawing.Size(100, 20);
             this.txtbevestigpaswoord.TabIndex = 11;
             // 

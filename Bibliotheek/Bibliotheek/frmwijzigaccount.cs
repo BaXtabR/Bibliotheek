@@ -144,6 +144,13 @@ namespace Bibliotheek
             }
         }
 
+        private void btnTerug_Click(object sender, EventArgs e)
+        {
+            frmhome home = new frmhome();
+            home.Show();
+            this.Hide();
+        }
+
         private void lblvnaam_Click(object sender, EventArgs e)
         {
             //variabele die de nieuwe voornaam bevat
