@@ -9,13 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
-
 namespace Bibliotheek
 {
-    public partial class frmboeken : Form
+    public partial class frmResultaat_zoeken_Boeken : Form
     {
-        public static int Key;
-        private static int min;
         private static int[] boekIDs = new int[3];
         public static string[] auteurs = new string[3];
         public static string[] Beschrijvingen = new string[3];
@@ -23,21 +20,43 @@ namespace Bibliotheek
         public static string[] Titels = new string[3];
         public static string[] ISBNs = new string[3];
         public static bool[] boekstatusen = new bool[3];
-        public static int boek_info;
-
-        public frmboeken()
+        public static int meer_boek_info;
+        int y = 1;
+        public frmResultaat_zoeken_Boeken()
         {
             InitializeComponent();
         }
 
-        private void frmboeken_Load(object sender, EventArgs e)
+        private void frmResultaat_zoeken_Boeken_Load(object sender, EventArgs e)
         {
-            min = 1;
-            boeken_load(min);
+                    zoeken_laden(y);
+                    leeg(boekIDs[1], boekIDs[2]);
         }
-        private void boeken_load(int minimum)
+        private void leeg(int boek2, int boek3)
         {
-            
+            if (boek2 == 0)
+            {
+                pcbboek2.Visible = false;
+                lblstatusboek2.Visible = false;
+                pcbstatus2.Visible = false;
+                lbltitel2.Visible = false;
+                lbltiteltext2.Visible = false;
+                btnmeerinfo2.Visible = false;
+                btnontlenen2.Visible = false;
+            }
+             if (boek3 == 0)
+            {
+                pcbboek3.Visible = false;
+                lblstatusboek3.Visible = false;
+                pcbstatus3.Visible = false;
+                lbltitel3.Visible = false;
+                lbltiteltext3.Visible = false;
+                btnmeerinfo3.Visible = false;
+                btnontlenen3.Visible = false;
+            }
+        }
+        private void zoeken_laden(int min)
+        {
 
             for (int i = 1; i <= 3; i++)
             {
@@ -52,7 +71,7 @@ namespace Bibliotheek
 
                 OleDbCommand opdracht = new OleDbCommand(code, verbinding);
 
-                opdracht.Parameters.AddWithValue("", minimum);
+                opdracht.Parameters.AddWithValue("", min);
 
                 OleDbDataReader dataLezer = opdracht.ExecuteReader(CommandBehavior.CloseConnection);
 
@@ -69,7 +88,7 @@ namespace Bibliotheek
                     status_van_boek(i - 1, dataLezer.GetBoolean(6));
                     boekIDs[i - 1] = Convert.ToInt32(dataLezer.GetValue(0));
                 }
-                minimum++;
+                min++;
             }
             lbltiteltext1.Text = Titels[0];
             lbltiteltext2.Text = Titels[1];
@@ -77,95 +96,7 @@ namespace Bibliotheek
             pcbboek1.ImageLocation = Afbeelding[0];
             pcbboek2.ImageLocation = Afbeelding[1];
             pcbboek3.ImageLocation = Afbeelding[2];
-
-
-        }
-
-        private void frmboeken_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-       private void v_Click(object sender, EventArgs e)
-        {
-            //foute benaming button en de knop is vervangen
-        }
-
-        private void btnmeerinfo1_Click(object sender, EventArgs e)
-        {
-            Key = 1;
-            frmmeer_info info = new frmmeer_info();
-            boek_info = 0;
-            info.Show();
-            this.Hide();
-        }
-
-        private void btnmeerinfo2_Click(object sender, EventArgs e)
-        {
-            Key = 1;
-            frmmeer_info info = new frmmeer_info();
-            boek_info = 1;
-            info.Show();
-            this.Hide();
-        }
-
-        private void btnmeerinfo3_Click(object sender, EventArgs e)
-        {
-            Key = 1;
-            frmmeer_info info = new frmmeer_info();
-            boek_info = 2;
-            info.Show();
-            this.Hide();
-        }
-
-        private void btnvooruit_Click(object sender, EventArgs e)
-        {
-            int maximum = 0, max;
-            String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
-
-            OleDbConnection verbinding = new OleDbConnection(verbindingsstring);
-
-            verbinding.Open();
-
-            String code = "SELECT count(*) FROM tblBoeken";
-
-            OleDbCommand opdracht = new OleDbCommand(code, verbinding);
-
-            OleDbDataReader dataLezer = opdracht.ExecuteReader(CommandBehavior.CloseConnection);
-
-
-
-            while (dataLezer.Read())
-            {
-                maximum = Convert.ToInt32(dataLezer.GetValue(0));
-            }
-
-            max = min + 2;
-            if(max != maximum)
-            {
-                min++;
-                boeken_load(min);
-            }
-            else
-            {
-                MessageBox.Show("Je kunt geen boeken meer laden");
-            }
-            
-        }
-
-        private void btnachteruit_Click(object sender, EventArgs e)
-        {
-            if(min != 1)
-            {
-                min--;
-                boeken_load(min);
-            }
-            else
-            {
-                MessageBox.Show("Je bent terug bij de start");
-            }
-
-        }
+         }
         private void status_van_boek(int welkboek, bool status)
         {
             switch (welkboek)
@@ -205,23 +136,67 @@ namespace Bibliotheek
 
         private void btnterug_Click(object sender, EventArgs e)
         {
-            frmhome home = new frmhome();
-            home.Show();
+            frmboeken boeken = new frmboeken();
+            boeken.Show();
             this.Hide();
         }
 
-        private void btnontlenen1_Click(object sender, EventArgs e)
+        private void btnmeerinfo2_Click(object sender, EventArgs e)
         {
-            if (boekstatusen[0])
+            frmboeken.Key = 2;
+            frmmeer_info info = new frmmeer_info();
+            meer_boek_info = 1;
+            info.Show();
+            this.Hide();
+        }
+
+        private void btnmeerinfo1_Click(object sender, EventArgs e)
+        {
+            frmboeken.Key = 2;
+            frmmeer_info info = new frmmeer_info();
+            meer_boek_info = 0;
+            info.Show();
+            this.Hide();
+        }
+
+        private void btnmeerinfo3_Click(object sender, EventArgs e)
+        {
+            frmboeken.Key = 2;
+            frmmeer_info info = new frmmeer_info();
+            meer_boek_info = 2;
+            info.Show();
+            this.Hide();
+        }
+
+        private void btnvooruit_Click(object sender, EventArgs e)
+        {
+            if (frmZoeken.gezochteIDs[y+2] != 0)
             {
-                ontlenen(boekIDs[0],frminloggen.id,0);
+                y++;
+                zoeken_laden(y);
             }
             else
             {
-                MessageBox.Show("Sorry dit boek is niet ter beschikking");
+                MessageBox.Show("Je kunt niet verder terug gaan");
             }
+            
+
         }
-        private void ontlenen(int boek,int user, int pos)
+
+        private void btnachteruit_Click(object sender, EventArgs e)
+        {
+            if (y != 1)
+            {
+                y--;
+                zoeken_laden(y);
+            }
+            else
+            {
+                MessageBox.Show("Je kunt niet verder terug gaan");
+            }
+           
+        }
+        private void ontlenen(int boek, int user, int pos)
         {
             String verbindingsstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Bib.accdb";
 
@@ -249,7 +224,7 @@ namespace Bibliotheek
             finally
             {
                 verbinding.Close();
-                wijzig_status(boek,pos);
+                wijzig_status(boek, pos);
             }
         }
         private void wijzig_status(int boek, int pos)
@@ -281,11 +256,23 @@ namespace Bibliotheek
             }
         }
 
+        private void btnontlenen1_Click(object sender, EventArgs e)
+        {
+            if (boekstatusen[0])
+            {
+                ontlenen(boekIDs[0], frminloggen.id, 0);
+            }
+            else
+            {
+                MessageBox.Show("Sorry dit boek is niet ter beschikking");
+            }
+        }
+
         private void btnontlenen2_Click(object sender, EventArgs e)
         {
             if (boekstatusen[1])
             {
-                ontlenen(boekIDs[1], frminloggen.id,1);
+                ontlenen(boekIDs[1], frminloggen.id, 1);
             }
             else
             {
@@ -297,23 +284,14 @@ namespace Bibliotheek
         {
             if (boekstatusen[2])
             {
-                ontlenen(boekIDs[2], frminloggen.id,2);
+                ontlenen(boekIDs[2], frminloggen.id, 2);
             }
             else
             {
                 MessageBox.Show("Sorry dit boek is niet ter beschikking");
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnZoeken_Click(object sender, EventArgs e)
-        {
-            frmZoeken zoek = new frmZoeken();
-            zoek.Show();
-            this.Hide();
-        }
     }
-}
+
+    }
+

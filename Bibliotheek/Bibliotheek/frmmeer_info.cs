@@ -19,24 +19,53 @@ namespace Bibliotheek
 
         private void frmmeer_info_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frmboeken boek = new frmboeken();
-            boek.Show();
-            this.Hide();
+            if(frmboeken.Key == 1)
+            {
+                frmboeken boek = new frmboeken();
+                boek.Show();
+                this.Hide();
+            }
+            else
+            {
+                frmResultaat_zoeken_Boeken boek = new frmResultaat_zoeken_Boeken();
+                boek.Show();
+                this.Hide();
+            }
         }
 
         private void btnterug_Click(object sender, EventArgs e)
         {
-            frmboeken boek = new frmboeken();
-            boek.Show();
-            this.Hide();
+            if (frmboeken.Key == 1)
+            {
+                frmboeken boek = new frmboeken();
+                boek.Show();
+                this.Hide();
+            }
+            else
+            {
+                frmResultaat_zoeken_Boeken boek = new frmResultaat_zoeken_Boeken();
+                boek.Show();
+                this.Hide();
+            }
         }
 
         private void frmmeer_info_Load(object sender, EventArgs e)
         {
-            int y = frmboeken.boek_info;
-            lblauteurtext.Text = frmboeken.auteurs[y];
-            lblisbntext.Text = frmboeken.ISBNs[y];
-            txtomschrijving.Text = frmboeken.Beschrijvingen[y];
+            if (frmboeken.Key == 1)
+            {
+                int y = frmboeken.boek_info;
+                lblauteurtext.Text = frmboeken.auteurs[y];
+                lblisbntext.Text = frmboeken.ISBNs[y];
+                txtomschrijving.Text = frmboeken.Beschrijvingen[y];
+            }
+            else
+            {
+                int y = frmResultaat_zoeken_Boeken.meer_boek_info;
+                lblauteurtext.Text = frmResultaat_zoeken_Boeken.auteurs[y];
+                lblisbntext.Text = frmResultaat_zoeken_Boeken.ISBNs[y];
+                txtomschrijving.Text = frmResultaat_zoeken_Boeken.Beschrijvingen[y];
+            }
+           
         }
     }
 }

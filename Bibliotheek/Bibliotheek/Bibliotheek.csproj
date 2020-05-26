@@ -115,8 +115,20 @@
     <Compile Include="frmmeer_info.Designer.cs">
       <DependentUpon>frmmeer_info.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmZoeken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmZoeken.Designer.cs">
+      <DependentUpon>frmZoeken.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmResultaat_zoeken_Boeken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResultaat_zoeken_Boeken.Designer.cs">
+      <DependentUpon>frmResultaat_zoeken_Boeken.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmboeken.resx">
       <DependentUpon>frmboeken.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +162,9 @@
     <EmbeddedResource Include="frmmeer_info.resx">
       <DependentUpon>frmmeer_info.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmZoeken.resx">
+      <DependentUpon>frmZoeken.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -160,6 +175,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="frmResultaat_zoeken_Boeken.resx">
+      <DependentUpon>frmResultaat_zoeken_Boeken.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

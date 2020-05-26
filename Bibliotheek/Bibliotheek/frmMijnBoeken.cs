@@ -13,6 +13,7 @@ namespace Bibliotheek
 {
     public partial class frmMijnBoeken : Form
     {
+        public static int Key;
         int lengte;
         private int[] BoekIds = new int[50];
         private static String tijdlenen;
