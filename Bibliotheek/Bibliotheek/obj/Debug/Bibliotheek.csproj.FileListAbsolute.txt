@@ -53,3 +53,4 @@ C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Biblio
 C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmmeer_info.resources
 C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmZoeken.resources
 C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmResultaat_zoeken_Boeken.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmRandomBoek.resources

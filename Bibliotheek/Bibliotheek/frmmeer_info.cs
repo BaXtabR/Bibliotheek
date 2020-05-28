@@ -25,10 +25,16 @@ namespace Bibliotheek
                 boek.Show();
                 this.Hide();
             }
-            else
+            else if(frmboeken.Key == 2)
             {
                 frmResultaat_zoeken_Boeken boek = new frmResultaat_zoeken_Boeken();
                 boek.Show();
+                this.Hide();
+            }
+            else
+            {
+                frmRandomBoek rboek = new frmRandomBoek();
+                rboek.Show();
                 this.Hide();
             }
         }
@@ -41,11 +47,15 @@ namespace Bibliotheek
                 boek.Show();
                 this.Hide();
             }
-            else
+            else if(frmboeken.Key == 2)
             {
                 frmResultaat_zoeken_Boeken boek = new frmResultaat_zoeken_Boeken();
                 boek.Show();
                 this.Hide();
+            }
+            else
+            {
+
             }
         }
 
@@ -58,12 +68,19 @@ namespace Bibliotheek
                 lblisbntext.Text = frmboeken.ISBNs[y];
                 txtomschrijving.Text = frmboeken.Beschrijvingen[y];
             }
-            else
+            else if(frmboeken.Key == 2)
             {
                 int y = frmResultaat_zoeken_Boeken.meer_boek_info;
                 lblauteurtext.Text = frmResultaat_zoeken_Boeken.auteurs[y];
                 lblisbntext.Text = frmResultaat_zoeken_Boeken.ISBNs[y];
                 txtomschrijving.Text = frmResultaat_zoeken_Boeken.Beschrijvingen[y];
+            }
+            else
+            {
+                
+                lblauteurtext.Text = frmRandomBoek.auteur;
+                lblisbntext.Text = frmRandomBoek.ISBN;
+                txtomschrijving.Text = frmRandomBoek.Beschrijvingen;
             }
            
         }

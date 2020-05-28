@@ -97,6 +97,12 @@
     <Compile Include="frmoverzichtgebruikers.Designer.cs">
       <DependentUpon>frmoverzichtgebruikers.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRandomBoek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRandomBoek.Designer.cs">
+      <DependentUpon>frmRandomBoek.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmregistreren.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmoverzichtgebruikers.resx">
       <DependentUpon>frmoverzichtgebruikers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRandomBoek.resx">
+      <DependentUpon>frmRandomBoek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmregistreren.resx">
       <DependentUpon>frmregistreren.cs</DependentUpon>

@@ -315,5 +315,12 @@ namespace Bibliotheek
             zoek.Show();
             this.Hide();
         }
+
+        private void btnrandomboek_Click(object sender, EventArgs e)
+        {
+            frmRandomBoek rboek = new frmRandomBoek();
+            rboek.Show();
+            this.Hide();
+        }
     }
 }
