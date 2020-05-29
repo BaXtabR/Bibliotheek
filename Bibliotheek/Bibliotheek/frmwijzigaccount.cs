@@ -30,7 +30,7 @@ namespace Bibliotheek
         {
             //variabele die de nieuwe achternaam bevat
             string nieuw = "", opdrString;
-            while (!nieuw.Equals(""))
+            while (string.IsNullOrEmpty(nieuw.Trim()))
             {
                 nieuw = Interaction.InputBox("Geef de nieuwe Achternaam");
             }
@@ -67,7 +67,7 @@ namespace Bibliotheek
         {
             //variabele die de nieuwe gebruikersnaam bevat
             string nieuw = "", opdrString;
-            while (!nieuw.Equals(""))
+            while (string.IsNullOrEmpty(nieuw.Trim()))
             {
                 nieuw = Interaction.InputBox("Geef de nieuwe gebruikernaam");
             }
@@ -109,7 +109,7 @@ namespace Bibliotheek
         {
             // variabele die de niewe email adress bevat
             string nieuw = "", opdrString;
-            while (!nieuw.Equals(""))
+            while (string.IsNullOrEmpty(nieuw.Trim()))
             {
                 nieuw = Interaction.InputBox("Geef de nieuwe Email addresss");
             }
@@ -155,7 +155,7 @@ namespace Bibliotheek
         {
             //variabele die de nieuwe voornaam bevat
             string nieuw = "", opdrString;
-            while (!nieuw.Equals("") )
+            while (string.IsNullOrEmpty(nieuw.Trim()))
             {
                 nieuw = Interaction.InputBox("Geef de nieuwe Voornaam");
             }

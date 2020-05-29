@@ -121,7 +121,9 @@ namespace Bibliotheek
                 bezitstatus(id);
                 boeteBerekenen();
             }
-
+            frmhome home = new frmhome();
+            home.Show();
+            this.Hide();
 
         }
         private void boeteBerekenen()

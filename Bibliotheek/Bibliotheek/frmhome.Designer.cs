@@ -37,6 +37,7 @@
             this.btnoverzichtboeken = new System.Windows.Forms.Button();
             this.lblgebebruiker = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnToevoegenBoekenAdmin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnbib
@@ -113,7 +114,7 @@
             // 
             this.lblgebebruiker.AutoSize = true;
             this.lblgebebruiker.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblgebebruiker.Location = new System.Drawing.Point(381, 94);
+            this.lblgebebruiker.Location = new System.Drawing.Point(383, 30);
             this.lblgebebruiker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblgebebruiker.Name = "lblgebebruiker";
             this.lblgebebruiker.Size = new System.Drawing.Size(66, 24);
@@ -124,18 +125,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(232, 94);
+            this.label1.Location = new System.Drawing.Point(234, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 24);
             this.label1.TabIndex = 10;
             this.label1.Text = "Ingelogd als:";
             // 
+            // btnToevoegenBoekenAdmin
+            // 
+            this.btnToevoegenBoekenAdmin.Location = new System.Drawing.Point(643, 307);
+            this.btnToevoegenBoekenAdmin.Name = "btnToevoegenBoekenAdmin";
+            this.btnToevoegenBoekenAdmin.Size = new System.Drawing.Size(129, 62);
+            this.btnToevoegenBoekenAdmin.TabIndex = 11;
+            this.btnToevoegenBoekenAdmin.Text = "Toevoegen boeken";
+            this.btnToevoegenBoekenAdmin.UseVisualStyleBackColor = true;
+            this.btnToevoegenBoekenAdmin.Click += new System.EventHandler(this.btnToevoegenBoekenAdmin_Click);
+            // 
             // frmhome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 428);
+            this.Controls.Add(this.btnToevoegenBoekenAdmin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblgebebruiker);
             this.Controls.Add(this.btnoverzichboetes);
@@ -165,5 +177,6 @@
         private System.Windows.Forms.Button btnoverzichtboeken;
         private System.Windows.Forms.Label lblgebebruiker;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnToevoegenBoekenAdmin;
     }
 }

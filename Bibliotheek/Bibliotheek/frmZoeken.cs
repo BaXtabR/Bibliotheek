@@ -96,17 +96,17 @@ namespace Bibliotheek
             switch (keuze)
             {
                 case 1:
-                     code = "SELECT BoekId from tblBoeken where Titel Like ?";
+                     code = "SELECT Boekid from tblBoeken where Titel Like ?";
                     break;
                 case 2:
-                     code = "SELECT BoekId from tblBoeken where Auteur Like ?";
+                     code = "SELECT Boekid from tblBoeken where Auteur Like ?";
                     break;
                 case 4:
-                     code = "SELECT BoekId from tblBoeken where ISBN Like ?";
+                     code = "SELECT Boekid from tblBoeken where ISBN Like ?";
 
                     break;
                 case 5:
-                     code = "SELECT b.BoekId from tblBoeken b,tblCategorien c,tblCategoriePerBoek cpb where cpb.BoekId = b.Boekid AND c.CategorieId = cpb.CategorieId And c.categorie Like ?";
+                     code = "SELECT b.Boekid from tblBoeken b,tblCategorien c,tblCategoriePerBoek cpb where cpb.BoekId = b.Boekid AND c.CategorieId = cpb.CategorieId And c.categorie Like ?";
                     break;
             }
            
@@ -114,6 +114,7 @@ namespace Bibliotheek
             OleDbCommand opdracht = new OleDbCommand(code, verbinding);
 
             opdracht.Parameters.AddWithValue("","%"+ zoekw +"%");
+          
            OleDbDataReader dataLezer = opdracht.ExecuteReader(CommandBehavior.CloseConnection);
 
             int i = 0;
@@ -124,9 +125,18 @@ namespace Bibliotheek
                 i++;
             }
             verbinding.Close();
-            frmResultaat_zoeken_Boeken rzb = new frmResultaat_zoeken_Boeken();
-            rzb.Show();
-            this.Hide();
+            MessageBox.Show(Convert.ToString(gezochteIDs[0]));
+            if(gezochteIDs[0] == 0)
+            {
+                MessageBox.Show("Er zijn geen correcte resultaten");
+            }
+            else
+            {
+                frmResultaat_zoeken_Boeken rzb = new frmResultaat_zoeken_Boeken();
+                rzb.Show();
+                this.Hide();
+            }
+            
         }
     }
 }

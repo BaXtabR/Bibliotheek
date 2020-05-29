@@ -47,7 +47,7 @@ namespace Bibliotheek
                 boek.Show();
                 this.Hide();
             }
-            else if(frmboeken.Key == 2)
+            else if (frmboeken.Key == 2)
             {
                 frmResultaat_zoeken_Boeken boek = new frmResultaat_zoeken_Boeken();
                 boek.Show();
@@ -55,7 +55,10 @@ namespace Bibliotheek
             }
             else
             {
-
+                frmRandomBoek.toegang = false;
+                frmRandomBoek rboek = new frmRandomBoek();
+                rboek.Show();
+                this.Hide();
             }
         }
 

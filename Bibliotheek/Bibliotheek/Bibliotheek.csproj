@@ -61,6 +61,18 @@
     <Compile Include="frmboetes.Designer.cs">
       <DependentUpon>frmboetes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmcommentaar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcommentaar.Designer.cs">
+      <DependentUpon>frmcommentaar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCommentMaken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCommentMaken.Designer.cs">
+      <DependentUpon>frmCommentMaken.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmhome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +147,23 @@
     <Compile Include="frmResultaat_zoeken_Boeken.Designer.cs">
       <DependentUpon>frmResultaat_zoeken_Boeken.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVoegBoekenToeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVoegBoekenToeAdmin.Designer.cs">
+      <DependentUpon>frmVoegBoekenToeAdmin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmboeken.resx">
       <DependentUpon>frmboeken.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmboetes.resx">
       <DependentUpon>frmboetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcommentaar.resx">
+      <DependentUpon>frmcommentaar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCommentMaken.resx">
+      <DependentUpon>frmCommentMaken.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmhome.resx">
       <DependentUpon>frmhome.cs</DependentUpon>
@@ -187,6 +211,9 @@
     <EmbeddedResource Include="frmResultaat_zoeken_Boeken.resx">
       <DependentUpon>frmResultaat_zoeken_Boeken.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVoegBoekenToeAdmin.resx">
+      <DependentUpon>frmVoegBoekenToeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,6 +226,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

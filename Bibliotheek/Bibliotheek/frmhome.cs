@@ -30,7 +30,9 @@ namespace Bibliotheek
                 btnoverzichboetes.Hide();
                 btnoverzichtaccounts.Hide();
                 btnoverzichtboeken.Hide();
+                btnToevoegenBoekenAdmin.Hide();
             }
+            
         }
 
         private void frmhome_FormClosed(object sender, FormClosedEventArgs e)
@@ -90,6 +92,19 @@ namespace Bibliotheek
             frmoverzichtboetes oboetes = new frmoverzichtboetes();
             oboetes.Show();
             this.Hide();
+        }
+
+        private void tmrfilmpje_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnToevoegenBoekenAdmin_Click(object sender, EventArgs e)
+        {
+            frmVoegBoekenToeAdmin vbta = new frmVoegBoekenToeAdmin();
+            vbta.Show();
+            this.Hide();
+            
         }
     }
 }

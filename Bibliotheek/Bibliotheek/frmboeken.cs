@@ -16,7 +16,7 @@ namespace Bibliotheek
     {
         public static int Key;
         private static int min;
-        private static int[] boekIDs = new int[3];
+        public static int[] boekIDs = new int[3];
         public static string[] auteurs = new string[3];
         public static string[] Beschrijvingen = new string[3];
         public static string[] Afbeelding = new string[3];
@@ -32,6 +32,7 @@ namespace Bibliotheek
 
         private void frmboeken_Load(object sender, EventArgs e)
         {
+            Key = 1;
             min = 1;
             boeken_load(min);
         }
@@ -93,29 +94,17 @@ namespace Bibliotheek
 
         private void btnmeerinfo1_Click(object sender, EventArgs e)
         {
-            Key = 1;
-            frmmeer_info info = new frmmeer_info();
-            boek_info = 0;
-            info.Show();
-            this.Hide();
+            meerinfo(0);
         }
 
         private void btnmeerinfo2_Click(object sender, EventArgs e)
         {
-            Key = 1;
-            frmmeer_info info = new frmmeer_info();
-            boek_info = 1;
-            info.Show();
-            this.Hide();
+            meerinfo(1);
         }
 
         private void btnmeerinfo3_Click(object sender, EventArgs e)
         {
-            Key = 1;
-            frmmeer_info info = new frmmeer_info();
-            boek_info = 2;
-            info.Show();
-            this.Hide();
+            meerinfo(2);
         }
 
         private void btnvooruit_Click(object sender, EventArgs e)
@@ -318,9 +307,39 @@ namespace Bibliotheek
 
         private void btnrandomboek_Click(object sender, EventArgs e)
         {
+            frmRandomBoek.toegang = true;
             frmRandomBoek rboek = new frmRandomBoek();
             rboek.Show();
             this.Hide();
+        }
+        private void meerinfo(int place)
+        {
+            frmmeer_info info = new frmmeer_info();
+            boek_info = place;
+            info.Show();
+            this.Hide();
+        }
+        private void commentaar(int place)
+        {
+            boek_info = place;
+            frmcommentaar comm = new frmcommentaar();
+            comm.Show();
+            this.Hide();
+        }
+
+        private void pcbboek1_Click(object sender, EventArgs e)
+        {
+            commentaar(0);
+        }
+
+        private void pcbboek2_Click(object sender, EventArgs e)
+        {
+            commentaar(1);
+        }
+
+        private void pcbboek3_Click(object sender, EventArgs e)
+        {
+            commentaar(2);
         }
     }
 }

@@ -21,7 +21,8 @@ namespace Bibliotheek
         public static string[] ISBNs = new string[3];
         public static bool[] boekstatusen = new bool[3];
         public static int meer_boek_info;
-        int y = 1;
+        
+        int y = 0;
         public frmResultaat_zoeken_Boeken()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace Bibliotheek
 
         private void frmResultaat_zoeken_Boeken_Load(object sender, EventArgs e)
         {
+                    frmboeken.Key = 2;
                     zoeken_laden(y);
                     leeg(frmZoeken.gezochteIDs[1], frmZoeken.gezochteIDs[2]);
         }
@@ -71,7 +73,7 @@ namespace Bibliotheek
 
                 OleDbCommand opdracht = new OleDbCommand(code, verbinding);
 
-                opdracht.Parameters.AddWithValue("", min);
+                opdracht.Parameters.AddWithValue("", frmZoeken.gezochteIDs[min]);
 
                 OleDbDataReader dataLezer = opdracht.ExecuteReader(CommandBehavior.CloseConnection);
 
@@ -143,29 +145,17 @@ namespace Bibliotheek
 
         private void btnmeerinfo2_Click(object sender, EventArgs e)
         {
-            frmboeken.Key = 2;
-            frmmeer_info info = new frmmeer_info();
-            meer_boek_info = 1;
-            info.Show();
-            this.Hide();
+            meerinfo(1);
         }
 
         private void btnmeerinfo1_Click(object sender, EventArgs e)
         {
-            frmboeken.Key = 2;
-            frmmeer_info info = new frmmeer_info();
-            meer_boek_info = 0;
-            info.Show();
-            this.Hide();
+            meerinfo(0);
         }
 
         private void btnmeerinfo3_Click(object sender, EventArgs e)
         {
-            frmboeken.Key = 2;
-            frmmeer_info info = new frmmeer_info();
-            meer_boek_info = 2;
-            info.Show();
-            this.Hide();
+            meerinfo(2);
         }
 
         private void btnvooruit_Click(object sender, EventArgs e)
@@ -290,6 +280,35 @@ namespace Bibliotheek
             {
                 MessageBox.Show("Sorry dit boek is niet ter beschikking");
             }
+        }
+
+        private void pcbboek1_Click(object sender, EventArgs e)
+        {
+            commentaar(0);
+        }
+
+        private void pcbboek2_Click(object sender, EventArgs e)
+        {
+            commentaar(1);
+        }
+
+        private void pcbboek3_Click(object sender, EventArgs e)
+        {
+            commentaar(2);
+        }
+        private void meerinfo(int place)
+        {
+            frmmeer_info info = new frmmeer_info();
+            meer_boek_info = place;
+            info.Show();
+            this.Hide();
+        }
+        private void commentaar(int place)
+        {
+            meer_boek_info = place;
+            frmcommentaar comm = new frmcommentaar();
+            comm.Show();
+            this.Hide();
         }
     }
 

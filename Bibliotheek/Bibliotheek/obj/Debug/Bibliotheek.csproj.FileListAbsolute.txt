@@ -54,3 +54,11 @@ C:\Users\Linda\Desktop\Senne\school\school informatica\C#\6IB\Bibliotheek\Biblio
 C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmZoeken.resources
 C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmResultaat_zoeken_Boeken.resources
 C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmRandomBoek.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmcommentaar.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\bin\Debug\Interop.WMPLib.dll
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Interop.WMPLib.dll
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.csproj.ResolveComReference.cache
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmCommentMaken.resources
+C:\Users\diang\Desktop\biblioheek\Bibliotheek\Bibliotheek\Bibliotheek\obj\Debug\Bibliotheek.frmVoegBoekenToeAdmin.resources

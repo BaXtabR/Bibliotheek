@@ -66,7 +66,7 @@
             // 
             this.btnachteruit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnachteruit.Location = new System.Drawing.Point(9, 439);
-            this.btnachteruit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnachteruit.Margin = new System.Windows.Forms.Padding(2);
             this.btnachteruit.Name = "btnachteruit";
             this.btnachteruit.Size = new System.Drawing.Size(106, 54);
             this.btnachteruit.TabIndex = 0;
@@ -78,7 +78,7 @@
             // 
             this.btnvooruit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvooruit.Location = new System.Drawing.Point(646, 439);
-            this.btnvooruit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnvooruit.Margin = new System.Windows.Forms.Padding(2);
             this.btnvooruit.Name = "btnvooruit";
             this.btnvooruit.Size = new System.Drawing.Size(106, 54);
             this.btnvooruit.TabIndex = 1;
@@ -90,34 +90,37 @@
             // 
             this.pcbboek1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pcbboek1.Location = new System.Drawing.Point(9, 10);
-            this.pcbboek1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbboek1.Margin = new System.Windows.Forms.Padding(2);
             this.pcbboek1.Name = "pcbboek1";
             this.pcbboek1.Size = new System.Drawing.Size(176, 213);
             this.pcbboek1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbboek1.TabIndex = 2;
             this.pcbboek1.TabStop = false;
+            this.pcbboek1.Click += new System.EventHandler(this.pcbboek1_Click);
             // 
             // pcbboek2
             // 
             this.pcbboek2.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pcbboek2.Location = new System.Drawing.Point(294, 10);
-            this.pcbboek2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbboek2.Margin = new System.Windows.Forms.Padding(2);
             this.pcbboek2.Name = "pcbboek2";
             this.pcbboek2.Size = new System.Drawing.Size(176, 213);
             this.pcbboek2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbboek2.TabIndex = 3;
             this.pcbboek2.TabStop = false;
+            this.pcbboek2.Click += new System.EventHandler(this.pcbboek2_Click);
             // 
             // pcbboek3
             // 
             this.pcbboek3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pcbboek3.Location = new System.Drawing.Point(576, 10);
-            this.pcbboek3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbboek3.Margin = new System.Windows.Forms.Padding(2);
             this.pcbboek3.Name = "pcbboek3";
             this.pcbboek3.Size = new System.Drawing.Size(176, 213);
             this.pcbboek3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbboek3.TabIndex = 4;
             this.pcbboek3.TabStop = false;
+            this.pcbboek3.Click += new System.EventHandler(this.pcbboek3_Click);
             // 
             // lblstatusboek1
             // 
@@ -133,7 +136,7 @@
             // 
             this.pcbstatus1.BackColor = System.Drawing.Color.Red;
             this.pcbstatus1.Location = new System.Drawing.Point(62, 239);
-            this.pcbstatus1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbstatus1.Margin = new System.Windows.Forms.Padding(2);
             this.pcbstatus1.Name = "pcbstatus1";
             this.pcbstatus1.Size = new System.Drawing.Size(123, 15);
             this.pcbstatus1.TabIndex = 6;
@@ -143,7 +146,7 @@
             // 
             this.pcbstatus2.BackColor = System.Drawing.Color.Red;
             this.pcbstatus2.Location = new System.Drawing.Point(347, 240);
-            this.pcbstatus2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbstatus2.Margin = new System.Windows.Forms.Padding(2);
             this.pcbstatus2.Name = "pcbstatus2";
             this.pcbstatus2.Size = new System.Drawing.Size(123, 15);
             this.pcbstatus2.TabIndex = 8;
@@ -163,7 +166,7 @@
             // 
             this.pcbstatus3.BackColor = System.Drawing.Color.Red;
             this.pcbstatus3.Location = new System.Drawing.Point(629, 242);
-            this.pcbstatus3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbstatus3.Margin = new System.Windows.Forms.Padding(2);
             this.pcbstatus3.Name = "pcbstatus3";
             this.pcbstatus3.Size = new System.Drawing.Size(123, 15);
             this.pcbstatus3.TabIndex = 10;
@@ -183,7 +186,7 @@
             // 
             this.btnmeerinfo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnmeerinfo2.Location = new System.Drawing.Point(294, 293);
-            this.btnmeerinfo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmeerinfo2.Margin = new System.Windows.Forms.Padding(2);
             this.btnmeerinfo2.Name = "btnmeerinfo2";
             this.btnmeerinfo2.Size = new System.Drawing.Size(176, 44);
             this.btnmeerinfo2.TabIndex = 13;
@@ -195,7 +198,7 @@
             // 
             this.btnmeerinfo3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnmeerinfo3.Location = new System.Drawing.Point(576, 293);
-            this.btnmeerinfo3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmeerinfo3.Margin = new System.Windows.Forms.Padding(2);
             this.btnmeerinfo3.Name = "btnmeerinfo3";
             this.btnmeerinfo3.Size = new System.Drawing.Size(176, 44);
             this.btnmeerinfo3.TabIndex = 14;
@@ -267,7 +270,7 @@
             // 
             this.btnmeerinfo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnmeerinfo1.Location = new System.Drawing.Point(9, 293);
-            this.btnmeerinfo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmeerinfo1.Margin = new System.Windows.Forms.Padding(2);
             this.btnmeerinfo1.Name = "btnmeerinfo1";
             this.btnmeerinfo1.Size = new System.Drawing.Size(176, 44);
             this.btnmeerinfo1.TabIndex = 21;
@@ -279,7 +282,7 @@
             // 
             this.btnterug.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnterug.Location = new System.Drawing.Point(279, 390);
-            this.btnterug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnterug.Margin = new System.Windows.Forms.Padding(2);
             this.btnterug.Name = "btnterug";
             this.btnterug.Size = new System.Drawing.Size(106, 54);
             this.btnterug.TabIndex = 22;
@@ -291,7 +294,7 @@
             // 
             this.btnontlenen1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnontlenen1.Location = new System.Drawing.Point(9, 342);
-            this.btnontlenen1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnontlenen1.Margin = new System.Windows.Forms.Padding(2);
             this.btnontlenen1.Name = "btnontlenen1";
             this.btnontlenen1.Size = new System.Drawing.Size(176, 44);
             this.btnontlenen1.TabIndex = 23;
@@ -303,7 +306,7 @@
             // 
             this.btnontlenen2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnontlenen2.Location = new System.Drawing.Point(294, 342);
-            this.btnontlenen2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnontlenen2.Margin = new System.Windows.Forms.Padding(2);
             this.btnontlenen2.Name = "btnontlenen2";
             this.btnontlenen2.Size = new System.Drawing.Size(176, 44);
             this.btnontlenen2.TabIndex = 24;
@@ -315,7 +318,7 @@
             // 
             this.btnontlenen3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnontlenen3.Location = new System.Drawing.Point(576, 342);
-            this.btnontlenen3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnontlenen3.Margin = new System.Windows.Forms.Padding(2);
             this.btnontlenen3.Name = "btnontlenen3";
             this.btnontlenen3.Size = new System.Drawing.Size(176, 44);
             this.btnontlenen3.TabIndex = 25;
@@ -327,7 +330,7 @@
             // 
             this.btnZoeken.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnZoeken.Location = new System.Drawing.Point(389, 390);
-            this.btnZoeken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnZoeken.Margin = new System.Windows.Forms.Padding(2);
             this.btnZoeken.Name = "btnZoeken";
             this.btnZoeken.Size = new System.Drawing.Size(106, 54);
             this.btnZoeken.TabIndex = 26;
@@ -378,7 +381,7 @@
             this.Controls.Add(this.pcbboek1);
             this.Controls.Add(this.btnvooruit);
             this.Controls.Add(this.btnachteruit);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmboeken";
             this.Text = "frmboeken";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmboeken_FormClosed);
